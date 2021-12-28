@@ -55,7 +55,7 @@ def env_vars(target_arch_name: str, android_api_level: int) -> Dict[str, str]:
 
         # Compiler flags
         'CPPFLAGS': f'-I{SYSROOT}/usr/include',
-        'CFLAGS': '-fPIC',
+        'CFLAGS': '-fPIC -Oz -O3',
         'CXXLAGS': '-fPIC',
         'LDFLAGS': f'-L{SYSROOT}/usr/lib -pie',
 
